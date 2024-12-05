@@ -15,8 +15,8 @@ public class HelloApplication extends Application {
         stage.setTitle("amr ali ");
         stage.setScene(scene);
         stage.show();
-//        amr ali omar jana
-        
+//        amr ali omar jana amr 
+
         
     }
 
