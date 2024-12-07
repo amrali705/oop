@@ -6,13 +6,13 @@ public class Comment {
     private int comment_id;
     protected static int count =0;
     public String content;
-    public String author;
+    public User author;
     private final Date timestamp;
     private List<User> likes;
     private List<Reply> replies;
 
 
-    public Comment(String content, String author, Date timestamp, List<User> likes) {
+    public Comment(String content, User author, Date timestamp, List<User> likes) {
         this.content = content;
         count ++;
         this.comment_id = count;
@@ -30,7 +30,7 @@ public class Comment {
         return content;
    }
 
-   public String getAuthor() {
+   public User getAuthor() {
         return author;
     }
 
@@ -58,7 +58,7 @@ public class Comment {
     public void setContent(String content) {
         this.content = content;
     }
-    public void setAuthor(String author) {
+    public void setAuthor(User author) {
         this.author = author;
     }
     public void setLikes(List<User> likes) {
