@@ -7,7 +7,7 @@ public class Comment {
     private final int comment_id;
     protected static int count =0;
     public String content;
-    public User author;
+    public final User author;
     private final Date timestamp;
     private List<User> likes;
     private List<Reply> replies;
@@ -52,9 +52,7 @@ public class Comment {
     public void setContent(String content) {
         this.content = content;
     }
-    public void setAuthor(User author) {
-        this.author = author;
-    }
+
     public void setLikes(List<User> likes) {
         this.likes = likes;
     }

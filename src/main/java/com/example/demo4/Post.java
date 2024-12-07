@@ -9,13 +9,14 @@ public class Post {
     private String content;
     private List<Comment> comments;
     private List<Reaction> likes;
-    private User author;
-static private  int post_id=0;
-
+    private final User author;
+    private final int post_id;
+    private static int count=0;
     private Date time_post;
 
-    public Post(int post_id, String content, User author, Date time) {
-        this.post_id ++;
+    public Post( String content, User author, Date time) {
+        count ++;
+        post_id = count;
         this.content = content;
         this.author = author;
         this.time_post = time;
@@ -27,9 +28,6 @@ static private  int post_id=0;
     public int getPostId() {
         return post_id;
     }
-    public void setPostId(int postId) {
-        this.post_id = postId;
-    }
     public String getContent() {
         return content;
     }
@@ -38,9 +36,6 @@ static private  int post_id=0;
     }
     public User getAuthor() {
         return author;
-    }
-    public void setAuthor(User author) {
-        this.author = author;
     }
     public Date getTimestamp() {
         return time_post;
