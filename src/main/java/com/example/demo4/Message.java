@@ -33,7 +33,7 @@ public class Message {
 
     // Edit message content
     public void editMessage(String newContent) {
-        if(content!="Message has been deleted."){
+        if(!content.equals("Message has been deleted.")){
         this.content = newContent;
         }
     }
