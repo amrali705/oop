@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Scanner;
 
 public class User {
-    private int id = 0;
+    private int id;
     private static int cont =0;
     public String name;
     private String email;
@@ -19,7 +19,7 @@ public class User {
 
     public User(String name, String email, String password, Date birthdate) {
         cont++;
-        id=cont;
+        this.id=cont;
         this.name = name;
         this.email = email;
         this.password = password;
