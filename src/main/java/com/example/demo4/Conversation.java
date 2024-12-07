@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Date;
 import java.util.List;
 public class Conversation {
+    //
         private String conversationId;
         private List<User> participants;
         private List<Message> messages;
@@ -55,7 +56,6 @@ public class Conversation {
                 }
             }
         }
-
       //display output
         public void displayConversation() {
           System.out.println("Participants: ");
