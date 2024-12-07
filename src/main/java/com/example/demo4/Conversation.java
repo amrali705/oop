@@ -23,7 +23,7 @@ public class Conversation {
             this.participants = participants;
             // this.isPrivate = false;
             this.messages = new ArrayList<>();
-            ArrayList<String> list = new ArrayList<>();
+//            ArrayList<String> list = new ArrayList<>();
         }
 
         //add Participant
@@ -45,33 +45,33 @@ public class Conversation {
             }
         }
         //Add the message to the conversation
-        public void sendMessage(User sender, String content) {
-            // Ensure sender is part of the conversation
-            if (participants.contains(sender)) {
-                // Create a new message
-                Message message = new Message(generateMessageId(), sender, content, new java.util.Date());
-                // Add the message to the conversation
-                messages.add(message);
-                System.out.println(sender.getName() + " sent a message: " + content);
-            } else {
-                System.out.println(sender.getName() + " is not part of this conversation.");
-            }
-        }
-        //display output
-        public void displayConversation() {
-            //System.out.println("Conversation ID: " + conversationId);
-            System.out.println("Participants: ");
-            for (User participant : participants) {
-                System.out.println("- " + participant.getName());
-            }
-            System.out.println("Messages: ");
-            for (Message message : messages) {
-                message.displayMessage();
-            }
-        }
-
-    }
-
-
+//        public void sendMessage(User sender, String content) {
+//            // Ensure sender is part of the conversation
+//            if (participants.contains(sender)) {
+//                // Create a new message
+//                Message message = new Message(generateMessageId(), sender, content, new java.util.Date());
+//                // Add the message to the conversation
+//                messages.add(message);
+//                System.out.println(sender.getName() + " sent a message: " + content);
+//            } else {
+//                System.out.println(sender.getName() + " is not part of this conversation.");
+//            }
+//        }
+//        //display output
+//        public void displayConversation() {
+//            //System.out.println("Conversation ID: " + conversationId);
+//            System.out.println("Participants: ");
+//            for (User participant : participants) {
+//                System.out.println("- " + participant.getName());
+//            }
+//            System.out.println("Messages: ");
+//            for (Message message : messages) {
+//                message.displayMessage();
+//            }
+//        }
 
 }
+
+
+
+
