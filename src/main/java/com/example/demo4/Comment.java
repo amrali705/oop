@@ -79,11 +79,16 @@ public class Comment {
         likes.add(user);
     }
 
+    public void removeLike(User user) {
+        this.likes.remove(user);
+    }
+
     public void editComment(String newContent) {
         if(!getContent().equals("COMMENT IS DELETED")){
             setContent(newContent);
         }
     }
+
 
     public void deleteComment() {
         setContent("COMMENT IS DELETED");
