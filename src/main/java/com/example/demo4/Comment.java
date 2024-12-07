@@ -76,11 +76,13 @@ public class Comment {
     }
 
     public void editComment(String newContent) {
-        this.content = newContent;
+        if(!getContent().equals("COMMENT IS DELETED")){
+            setContent(newContent);
+        }
     }
 
     public void deleteComment() {
-        System.out.println("Comment deleted");
+        setContent("COMMENT IS DELETED");
     }
 }
 
