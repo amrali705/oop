@@ -1,5 +1,6 @@
 package com.example.demo4;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 public class Comment {
@@ -12,13 +13,14 @@ public class Comment {
     private List<Reply> replies;
 
 
-    public Comment(String content, User author, Date timestamp, List<User> likes) {
+    public Comment(String content, User author, Date timestamp) {
         this.content = content;
         count ++;
         this.comment_id = count;
         this.author = author;
         this.timestamp = timestamp;
-        this.likes = likes;
+        this.likes = new ArrayList<>();
+        this.replies = new ArrayList<>();
     }
 
     // getters
@@ -46,11 +48,6 @@ public class Comment {
         return replies;
     }
 
-
-
-
-
-
     // setters
     public void setComment_id(int comment_id) {
         this.comment_id = comment_id;
@@ -68,15 +65,13 @@ public class Comment {
         this.replies = replies;
     }
 
-
-
-
-
-
-
     // methods
     public void addLike(User user) {
         likes.add(user);
+    }
+    public void addReply (String content, User author, Date timestamp){
+        Reply reply =new Reply( content, author, timestamp);
+        replies.add(reply);
     }
 
     public void removeLike(User user) {
