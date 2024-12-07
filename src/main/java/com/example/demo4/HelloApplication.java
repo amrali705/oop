@@ -1,5 +1,10 @@
 package com.example.demo4;
+import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.Date;
+import java.text.SimpleDateFormat;
 
+import java.util.Scanner;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -15,12 +20,20 @@ public class HelloApplication extends Application {
         stage.setTitle("amr ali ");
         stage.setScene(scene);
         stage.show();
-//        amr ali omar jana amr 
-
-        
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+//
+//        User user1 = new User("amr", "amraliali434@gmail.com", "1+53456##", dateFormat.parse("2022-03-25"));
+//
+//        user1.make_post(user1, dateFormat.parse("2024-03-25"));
+//        user1.make_post(user1, dateFormat.parse("2024-03-25"));
+//        user1.make_post(user1, dateFormat.parse("2024-03-25"));
+//
+//        user1.get_post(1).addLike(user1);
+//        System.out.println(user1.get_post(1).getLikes().size());
+
         launch();
     }
 }
