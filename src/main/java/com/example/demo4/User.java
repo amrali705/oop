@@ -2,16 +2,17 @@ package com.example.demo4;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 public class User {
-    private int id;
+    private final int id;
     private static int cont =0;
     public String name;
     private String email;
     private String password;
     private Date birthdate;
-    private final ArrayList<User>friends ;
+    private final ArrayList<User> friends ;
     private final ArrayList<Post>posts;
     private String bio;
     Scanner input =new Scanner(System.in);
@@ -70,7 +71,7 @@ public class User {
     }
 
 
-    public void  add_friend (User friend ){
+    protected void  add_friend (User friend ){
         if (!friends.contains(friend)) friends.add(friend);
     }
     public void  remove_friend (User friend ){
@@ -93,6 +94,11 @@ public class User {
             return posts.get(num);
         }
         throw new IndexOutOfBoundsException("Invalid post index.");
+    }
+    public void make_friend_Request(User user,User friend_Request_to){
+        if (!friends.contains(friend_Request_to)) {
+            Friend_Request friendRequest = new Friend_Request(user, friend_Request_to);
+        }
     }
 
 

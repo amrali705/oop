@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 public class Comment {
-    private int comment_id;
+    private final int comment_id;
     protected static int count =0;
     public String content;
     public User author;
@@ -49,9 +49,6 @@ public class Comment {
     }
 
     // setters
-    public void setComment_id(int comment_id) {
-        this.comment_id = comment_id;
-    }
     public void setContent(String content) {
         this.content = content;
     }
