@@ -1,7 +1,7 @@
 package com.example.demo4;
 
 public class Friend_Request {
-    private int id ;
+    private final int id ;
     private static int cont =0;
     private final  User sender ;
     private final  User receiver ;

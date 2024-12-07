@@ -47,7 +47,7 @@ public class Conversation {
                 messages.add(message);
             }
         }
-        //delet message
+        //delete message
         public void deleteMessage(String messageId) {
             for (Message message : messages) {
                 if (message.getMessageId().equals(messageId)) {
