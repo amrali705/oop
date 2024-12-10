@@ -21,6 +21,7 @@ public class CreatingAccountview {
         Scene scene1 =new Scene(root);
         stage.setScene(scene1);
         stage.show();
+        new HelloApplication().window=stage;
 
     }
 }

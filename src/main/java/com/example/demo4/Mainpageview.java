@@ -24,5 +24,6 @@ public class Mainpageview {
         Scene scene =new Scene(root);
         stage.setScene(scene);
         stage.show();
+        new HelloApplication().window=stage;
     }
 }

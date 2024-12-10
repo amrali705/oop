@@ -14,7 +14,6 @@ import java.util.ArrayList;
 
 public class CreatingAccountController {
 
-    public ArrayList<User>users =new ArrayList<>();
 
     @FXML
     private Button CreatenewAccount;
@@ -48,11 +47,10 @@ public class CreatingAccountController {
         try {
             if (passwordTf.getText().equals(confirmpasswordTf.getText())) {
                 Date birthDate = Date.valueOf(birthdate.getValue());
-
                 User user = new User(userNameTf.getText(), emailTf.getText(), passwordTf.getText(), birthDate);
-                users.add(user);
                 System.out.println("Account created successfully!");
                 System.out.println("User Details: " + user.getName() + ", " + user.getEmail()+ user.getBirthdate());
+                new HelloApplication().stageview().close();
                 new Mainpageview().mainpageview();
 
             } else {
