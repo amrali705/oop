@@ -13,9 +13,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="472.0" prefWidth="681.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.CreatingAccountController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.CreatingAccountController">
    <children>
-      <AnchorPane prefHeight="268.0" prefWidth="600.0" style="-fx-background-color: #3936ff;">
+      <AnchorPane prefHeight="206.0" prefWidth="800.0" style="-fx-background-color: #3936ff;">
          <children>
             <ImageView fitHeight="52.0" fitWidth="58.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
@@ -29,62 +29,62 @@
             </Text>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="10.0" layoutY="10.0" onMouseClicked="#CreateAccount" prefHeight="610.0" prefWidth="682.0">
+      <AnchorPane layoutX="10.0" layoutY="10.0" onMouseClicked="#CreateAccount" prefHeight="600.0" prefWidth="800.0">
          <children>
-            <Text layoutX="47.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="52.0">
+            <Text layoutX="121.0" layoutY="130.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email :" wrappingWidth="52.0">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text layoutX="47.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" wrappingWidth="85.18307685852051">
+            <Text layoutX="121.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" wrappingWidth="85.18307685852051">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField layoutX="221.0" layoutY="64.0" prefHeight="30.0" prefWidth="298.0" promptText="Email">
+            <TextField fx:id="emailTf" layoutX="270.0" layoutY="110.0" prefHeight="30.0" prefWidth="298.0" promptText="Email">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <PasswordField layoutX="221.0" layoutY="102.0" prefHeight="30.0" prefWidth="298.0" promptText="Password">
+            <PasswordField fx:id="passwordTf" layoutX="270.0" layoutY="155.0" prefHeight="30.0" prefWidth="298.0" promptText="Password">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Button fx:id="CreatenewAccount" layoutX="258.0" layoutY="332.0" mnemonicParsing="false" onMouseClicked="#CreateAccount" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #3ffc00;" text="Create new Account" textFill="WHITE" />
-            <Text layoutX="47.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password :" wrappingWidth="165.5999999999999">
+            <Button fx:id="CreatenewAccount" layoutX="300.0" layoutY="408.0" mnemonicParsing="false" onMouseClicked="#CreateAccount" prefHeight="35.0" prefWidth="165.0" style="-fx-background-color: #3ffc00;" text="Create new Account" textFill="WHITE" />
+            <Text layoutX="121.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Confirm Password :" wrappingWidth="165.5999999999999">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <PasswordField layoutX="221.0" layoutY="140.0" prefHeight="30.0" prefWidth="298.0" promptText="Confirm Password :">
+            <PasswordField fx:id="confirmpasswordTf" layoutX="270.0" layoutY="202.0" prefHeight="30.0" prefWidth="298.0" promptText="Confirm Password :">
                <font>
                   <Font size="14.0" />
                </font>
             </PasswordField>
-            <Text layoutX="47.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name:" wrappingWidth="107.54296875">
+            <Text layoutX="121.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User Name:" wrappingWidth="107.54296875">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <TextField layoutX="221.0" layoutY="24.0" prefHeight="30.0" prefWidth="298.0" promptText="User Name:">
+            <TextField fx:id="userNameTf" layoutX="270.0" layoutY="63.0" prefHeight="30.0" prefWidth="298.0" promptText="User Name:">
                <font>
                   <Font size="14.0" />
                </font>
             </TextField>
-            <RadioButton layoutX="221.0" layoutY="194.0" mnemonicParsing="false" text="Male">
+            <RadioButton fx:id="male" layoutX="286.0" layoutY="252.0" mnemonicParsing="false" text="Male">
                <toggleGroup>
                   <ToggleGroup fx:id="sex" />
                </toggleGroup>
             </RadioButton>
-            <RadioButton layoutX="341.0" layoutY="195.0" mnemonicParsing="false" text="Female" toggleGroup="$sex" />
-            <Text layoutX="47.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" wrappingWidth="165.5999999999999">
+            <RadioButton fx:id="female" layoutX="476.0" layoutY="252.0" mnemonicParsing="false" text="Female" toggleGroup="$sex" />
+            <Text layoutX="120.0" layoutY="266.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" wrappingWidth="165.5999999999999">
                <font>
                   <Font size="14.0" />
                </font>
             </Text>
-            <DatePicker layoutX="283.0" layoutY="236.0" />
-            <Text layoutX="47.0" layoutY="254.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthdate" wrappingWidth="165.5999999999999">
+            <DatePicker fx:id="birthdate" layoutX="331.0" layoutY="283.0" />
+            <Text layoutX="120.0" layoutY="302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Birthdate" wrappingWidth="165.5999999999999">
                <font>
                   <Font size="14.0" />
                </font>

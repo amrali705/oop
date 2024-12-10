@@ -15,6 +15,8 @@ public class CreatingAccountview {
 
     }
     public void Creatingtview(){
+        new HelloApplication().stageview().close();
+
         Stage stage=new Stage();
         Scene scene1 =new Scene(root);
         stage.setScene(scene1);

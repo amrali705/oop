@@ -13,12 +13,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    private static Stage window;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Login_css.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 552, 400);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("amr ali ");
         stage.setScene(scene);
+        window=stage;
         stage.show();
     }
 
@@ -30,5 +32,10 @@ public class HelloApplication extends Application {
 
         launch();
     }
+    public Stage stageview (){
+        return this.window;
+    }
+
+
 
 }
