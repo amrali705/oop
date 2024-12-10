@@ -7,6 +7,7 @@ import java.text.SimpleDateFormat;
 import java.util.Scanner;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -22,22 +23,13 @@ public class HelloApplication extends Application {
         stage.show();
     }
 
-    public static void main(String[] args) throws ParseException {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-//
-         User user1 = new User("amr", "amraliali434@gmail.com", "1+53456##", dateFormat.parse("2022-03-25"));
-//
-//        user1.make_post(user1, dateFormat.parse("2024-03-25"));
-//        user1.make_post(user1, dateFormat.parse("2024-03-25"));
-//        user1.make_post(user1, dateFormat.parse("2024-03-25"));
-//
-//        user1.get_post(1).addLike(user1);
-//        System.out.println(user1.get_post(1).getLikes().size());
-        Reply mmm =new Reply("sadf",user1,dateFormat.parse("2022-03-25"));
 
+
+    public static void main(String[] args) throws ParseException {
 
 
 
         launch();
     }
+
 }
