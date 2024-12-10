@@ -33,10 +33,8 @@ public class Message {
 
     // Edit message content
     public void editMessage(String newContent) {
-
-        if(content!="Message has been deleted.") {
-            // this.content = newContent;
-            this.setContent(newContent);
+        if(!content.equals("Message has been deleted.")){
+        this.content = newContent;
         }
     }
     // Delete message
