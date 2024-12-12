@@ -11,6 +11,7 @@ module com.example.demo4 {
     requires eu.hansolo.tilesfx;
     requires com.almasb.fxgl.all;
     requires com.google.gson;
+    requires java.desktop;
 
 
     opens com.example.demo4 to javafx.fxml,com.google.gson;

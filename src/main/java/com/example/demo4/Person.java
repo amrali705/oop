@@ -1,7 +1,10 @@
 package com.example.demo4;
 
 import com.google.gson.annotations.Expose;
+
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class Person {
 
@@ -9,7 +12,7 @@ public class Person {
 
     public String name;
 
-    private ArrayList<Person> people;
+    private List people;
 
     public Person(int id, String name) {
         this.id = id;
