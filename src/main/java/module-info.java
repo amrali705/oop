@@ -12,6 +12,7 @@ module com.example.demo4 {
     requires com.almasb.fxgl.all;
     requires com.google.gson;
     requires java.desktop;
+    requires java.sql;
 
 
     opens com.example.demo4 to javafx.fxml,com.google.gson;

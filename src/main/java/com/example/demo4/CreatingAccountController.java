@@ -9,13 +9,7 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
-
-
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.lang.reflect.Type;
-import java.util.ArrayList;
+import java.sql.Date;
 import java.util.List;
 
 public class CreatingAccountController {
@@ -50,15 +44,18 @@ public class CreatingAccountController {
 
     @FXML
     void CreateAccount(MouseEvent event) {
+
         try {
             if (passwordTf.getText().equals(confirmpasswordTf.getText())) {
-//                Date birthDate = Date.valueOf(birthdate.getValue());
-//                User user = new User(userNameTf.getText(), emailTf.getText(), passwordTf.getText(), birthDate);
-//                System.out.println("Account created successfully!");
-//                System.out.println("User Details: " + user.getName() + ", " + user.getEmail()+ user.getBirthdate());
-//                new HelloApplication().stageview().close();
-//                new Mainpageview().mainpageview();
-                // File to store data
+                Date BirthDate = Date.valueOf(birthdate.getValue());
+                JsonHandler jsonHandler = new JsonHandler();
+                List <User> users = jsonHandler.loadUsers();
+                User newUser = new User(userNameTf.getText(), emailTf.getText(), confirmpasswordTf.getText(),BirthDate);
+                users.add(newUser);
+                jsonHandler.saveUsers(users); // Save updated user list to file
+                System.out.println("User registered successfully!");
+                LoginController.theuser=newUser;
+                new Mainpageview().mainpageview();
 
 
             } else {
@@ -69,4 +66,6 @@ public class CreatingAccountController {
             e.printStackTrace();
         }
     }
+
+
 }

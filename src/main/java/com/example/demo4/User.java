@@ -1,5 +1,7 @@
 package com.example.demo4;
 
+import javafx.scene.control.DatePicker;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -15,7 +17,9 @@ public class User {
     private final ArrayList<User> friends ;
     private final ArrayList<Post>posts;
     private String bio;
-    Scanner input =new Scanner(System.in);
+
+
+    private transient Scanner input = new Scanner(System.in);
 
 
     public User(String name, String email, String password, Date birthdate) {
@@ -28,7 +32,6 @@ public class User {
         this.friends = new ArrayList<>();
         this.posts= new ArrayList<>();
     }
-
 
     public String getBio() {
         return bio;
