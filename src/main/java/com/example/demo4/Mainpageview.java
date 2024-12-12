@@ -20,6 +20,7 @@ public class Mainpageview {
         }
     }
     public void mainpageview(){
+        new HelloApplication().stageview().close();
         Stage stage=new Stage();
         Scene scene =new Scene(root);
         stage.setScene(scene);

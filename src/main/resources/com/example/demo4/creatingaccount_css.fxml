@@ -19,7 +19,7 @@
          <children>
             <ImageView fitHeight="52.0" fitWidth="58.0" layoutX="8.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@facebook.png" />
+                  <Image url="@png/facebook.png" />
                </image>
             </ImageView>
             <Text fill="#f9fff7" fontSmoothingType="LCD" layoutX="69.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Facebook">
