@@ -13,6 +13,7 @@ module com.example.demo4 {
     requires com.google.gson;
     requires java.desktop;
     requires java.sql;
+    requires jdk.dynalink;
 
 
     opens com.example.demo4 to javafx.fxml,com.google.gson;

@@ -89,6 +89,7 @@
                   <Font size="14.0" />
                </font>
             </Text>
+            <Button layoutX="568.0" layoutY="413.0" mnemonicParsing="false" onMouseClicked="#editaccount" text="Edit account" textFill="#21250d" />
          </children>
       </AnchorPane>
       <AnchorPane prefHeight="204.0" prefWidth="600.0" />

@@ -31,6 +31,13 @@ public class profilecontroller implements Initializable {
     void gomain(MouseEvent event) throws IOException {
         new Mainpageview().mainpageview();
     }
+     @FXML
+
+    void editprofile(MouseEvent event)throws IOException {
+
+        new CreatingAccountview().Creatingtview();
+
+    }
 
 
     @Override
@@ -54,3 +61,36 @@ public class profilecontroller implements Initializable {
         }
     }
 }
+
+/*package com.example.demo4;
+
+import javafx.fxml.FXML;
+import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
+
+public class profilecontroller {
+
+    @FXML
+    private Button home;
+
+    @FXML
+    private TextField searchbar;
+
+    @FXML
+    private VBox vboxprofilepost;
+
+    @FXML
+    void editprofile(MouseEvent event) {
+
+    }
+
+    @FXML
+    void gomain(MouseEvent event) {
+        new Mainpageview().mainpageview();
+    }
+
+}*/
+
+
