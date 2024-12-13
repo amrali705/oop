@@ -60,7 +60,7 @@
          <children>
             <ImageView fitHeight="73.0" fitWidth="553.0" layoutX="24.0" layoutY="40.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@png/WhatsApp%20Image%202024-12-13%20at%2002.28.59_ff366e52.jpg" />
+                  <Image url="@png/tab.jpg" />
                </image>
             </ImageView>
             <Button layoutX="24.0" layoutY="112.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="553.0" text="post" textFill="#070000">
@@ -70,12 +70,12 @@
             </Button>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="24.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@png/WhatsApp%20Image%202024-12-13%20at%2002.34.44_d28393a5.jpg" />
+                  <Image url="@png/react.jpg" />
                </image>
             </ImageView>
             <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="547.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@png/WhatsApp%20Image%202024-12-13%20at%2002.46.45_a68dd4d9.jpg" />
+                  <Image url="@png/view.jpg" />
                </image>
             </ImageView>
          </children>
