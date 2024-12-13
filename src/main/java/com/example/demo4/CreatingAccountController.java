@@ -1,5 +1,6 @@
 package com.example.demo4;
 
+
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
@@ -8,9 +9,8 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
-
 import java.sql.Date;
-import java.util.ArrayList;
+import java.util.List;
 
 public class CreatingAccountController {
 
@@ -44,14 +44,19 @@ public class CreatingAccountController {
 
     @FXML
     void CreateAccount(MouseEvent event) {
+
         try {
             if (passwordTf.getText().equals(confirmpasswordTf.getText())) {
-                Date birthDate = Date.valueOf(birthdate.getValue());
-                User user = new User(userNameTf.getText(), emailTf.getText(), passwordTf.getText(), birthDate);
-                System.out.println("Account created successfully!");
-                System.out.println("User Details: " + user.getName() + ", " + user.getEmail()+ user.getBirthdate());
-                new HelloApplication().stageview().close();
+                Date BirthDate = Date.valueOf(birthdate.getValue());
+                JsonHandler jsonHandler = new JsonHandler();
+                List <User> users = jsonHandler.loadUsers();
+                User newUser = new User(userNameTf.getText(), emailTf.getText(), confirmpasswordTf.getText(),BirthDate);
+                users.add(newUser);
+                jsonHandler.saveUsers(users); // Save updated user list to file
+                System.out.println("User registered successfully!");
+                LoginController.theuser=newUser;
                 new Mainpageview().mainpageview();
+
 
             } else {
                 System.out.println("Passwords do not match!");
@@ -61,4 +66,6 @@ public class CreatingAccountController {
             e.printStackTrace();
         }
     }
+
+
 }
