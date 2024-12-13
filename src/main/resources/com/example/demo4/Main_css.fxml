@@ -63,35 +63,35 @@
       </AnchorPane>
    </top>
    <right>
-      <VBox fx:id="vbox_of_friends" prefHeight="593.0" prefWidth="218.0" BorderPane.alignment="CENTER">
+      <VBox fx:id="vbox_of_friends" prefHeight="598.0" prefWidth="156.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane>
                <children>
-                  <Text fill="#595959" layoutX="14.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="contacts " wrappingWidth="102.93673706054688">
+                  <Text fill="#595959" layoutX="14.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="contacts " wrappingWidth="86.93673706054688">
                      <font>
                         <Font name="System Bold" size="17.0" />
                      </font>
                   </Text>
-                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="136.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: #9e9393;">
+                  <ImageView fitHeight="22.0" fitWidth="31.0" layoutX="101.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" style="-fx-image: #9e9393;">
                      <image>
                         <Image url="@png/search.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="163.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="123.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@png/menu.png" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="312.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="312.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@png/profile.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="55.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="friend 1" wrappingWidth="102.93673706054688">
+                  <Text layoutX="45.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="friend 1" wrappingWidth="90.13668823242188">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -102,9 +102,9 @@
       </VBox>
    </right>
    <left>
-      <VBox prefHeight="592.0" prefWidth="198.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="598.0" prefWidth="175.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -118,21 +118,21 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@png/friend.png" />
                      </image>
                   </ImageView>
-                  <Text layoutX="55.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends" wrappingWidth="102.93673706054688">
+                  <Text layoutX="57.0" layoutY="24.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friends" wrappingWidth="80.5367431640625">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="48.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="48.0" prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -146,7 +146,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="85.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="85.0" prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -160,7 +160,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="123.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="123.0" prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -174,7 +174,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="160.0" prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -188,7 +188,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="198.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="198.0" prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -202,7 +202,7 @@
                   </Text>
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="10.0" layoutY="236.0" prefHeight="50.0" prefWidth="200.0">
+            <AnchorPane layoutX="10.0" layoutY="236.0" prefHeight="50.0">
                <children>
                   <ImageView fitHeight="36.0" fitWidth="31.0" layoutX="14.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -221,13 +221,13 @@
       </VBox>
    </left>
    <center>
-      <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="598.0" prefWidth="585.0" BorderPane.alignment="CENTER">
+      <ScrollPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="501.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="vbox_of_postes" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="686.0" prefWidth="398.0">
+            <VBox fx:id="vbox_of_postes" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefWidth="500.0">
                <children>
-                  <AnchorPane prefHeight="82.0" prefWidth="428.0">
+                  <AnchorPane prefHeight="82.0" prefWidth="198.0">
                      <children>
-                        <ImageView fitHeight="39.0" fitWidth="411.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="67.0" fitWidth="484.0" layoutX="2.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@png/Screen.png" />
                            </image>
@@ -237,7 +237,7 @@
                               <Image url="@png/profile.png" />
                            </image>
                         </ImageView>
-                        <Button layoutX="42.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#create_post" prefHeight="26.0" prefWidth="354.0" style="-fx-background-color: #ffffff;" text="what's on your mind ?" />
+                        <Button layoutX="35.0" layoutY="6.0" mnemonicParsing="false" onMouseClicked="#create_post" prefHeight="26.0" prefWidth="450.0" style="-fx-background-color: #ffffff;" text="what's on your mind ?" />
                      </children>
                   </AnchorPane>
                </children></VBox>

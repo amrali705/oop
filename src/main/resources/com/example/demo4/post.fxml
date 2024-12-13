@@ -1,93 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="post" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="501.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.postcontroller">
    <top>
       <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="100.0" prefWidth="633.0">
+            <AnchorPane prefHeight="100.0" prefWidth="526.0">
                <children>
-                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="50.0" fitWidth="50.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@profile.png" />
+                        <Image url="@png/profile.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="50.0" layoutY="18.0" text="username">
+                  <Label fx:id="usernametf" layoutX="46.0" layoutY="36.0" text="username">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="134.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="124.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../../images/social-media.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="553.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="28.0" fitWidth="33.0" layoutX="438.0" layoutY="31.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@menu.png" />
+                        <Image url="@png/ic_more.png" />
                      </image>
                   </ImageView>
-                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="74.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="15.0" fitWidth="15.0" layoutX="70.0" layoutY="60.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@th.jpeg" />
                      </image>
                   </ImageView>
-                  <Label layoutX="50.0" layoutY="42.0" text="1h" />
+                  <Label layoutX="50.0" layoutY="58.0" text="1h" />
+                  <Line endX="387.4000244140625" endY="-7.5070953369140625" layoutX="115.0" layoutY="14.0" startX="-115.0" startY="-7.507110595703125" />
                </children>
             </AnchorPane>
-            <Label text="Label" />
          </children>
       </HBox>
    </top>
-   <center>
-      <TextArea prefHeight="175.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
-   </center>
    <bottom>
       <HBox prefHeight="58.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="15.0" prefWidth="600.0">
+            <AnchorPane prefHeight="59.0" prefWidth="501.0">
                <children>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="6.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons8-like-50.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="46.0" layoutY="16.0" prefHeight="17.0" prefWidth="62.0" text="Like">
+                  <Label layoutX="58.0" layoutY="16.0" prefHeight="17.0" prefWidth="62.0" text="Like">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="203.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="184.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@icons8-comments-50.png" />
                      </image>
                   </ImageView>
-                  <Label layoutX="244.0" layoutY="16.0" text="Comment">
+                  <Label layoutX="231.0" layoutY="15.0" text="Comment">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="424.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="394.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@share.jpeg" />
                      </image>
                   </ImageView>
-                  <Label layoutX="474.0" layoutY="14.0" text="share">
+                  <Label layoutX="430.0" layoutY="16.0" text="share">
                      <font>
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
+                  <Button fx:id="likeButton" layoutX="23.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#makelike" opacity="0.0" prefHeight="26.0" prefWidth="69.0" />
                </children>
             </AnchorPane>
          </children>
       </HBox>
    </bottom>
+   <center>
+      <Label fx:id="contentofpost" alignment="TOP_LEFT" prefWidth="514.0" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="Arial" size="22.0" />
+         </font>
+      </Label>
+   </center>
 </BorderPane>

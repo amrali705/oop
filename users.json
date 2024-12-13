@@ -1,1 +1,19 @@
-[{"id":1,"name":"amr","email":"amrali@gmail.com","password":"1.2.3","birthdate":"2024-11-27","friends":[],"posts":[]},{"id":1,"name":"omar","email":"omar@gmail.com","password":"1234","birthdate":"2024-12-12","friends":[],"posts":[]}]
+[
+  {
+    "birthdate": "2024-11-27",
+    "email": "amrali@gmail.com",
+    "friends": [],
+    "id": 1,
+    "name": "amr",
+    "password": "1.2.3",
+    "posts": []
+  },
+  {
+    "birthdate": "2024-12-12",
+    "email": "omar@gmail.com",
+    "friends": [],
+    "id": 1,
+    "name": "omar",
+    "password": "1234",
+    "posts": []
+  }]
