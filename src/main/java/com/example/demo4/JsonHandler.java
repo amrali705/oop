@@ -16,6 +16,8 @@ public class JsonHandler {
 
     private static final String FILE_PATH_user = "users.json";
     private static final String FILE_PATH_post = "posts.json";
+    private static final String FILE_PATH_message = "message.json";
+
     private static final Gson GSON = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd")
             .create();
@@ -63,11 +65,41 @@ public class JsonHandler {
 
 
     // Save posts to JSON
-    public void savePosts(List<Post> posts) {
+    public void savePosts(List<Post>posts) {
         try (FileWriter writer = new FileWriter(FILE_PATH_post)) {
             GSON.toJson(posts, writer);
         } catch (IOException e) {
             System.out.println("Error writing posts file: " + e.getMessage());
         }
     }
+
+
+
+////////////      message          ////////////
+
+    // Load message from JSON
+    public List<Message> loadMessages() {
+        try (FileReader reader = new FileReader(FILE_PATH_message)) {
+            Type messageListType = new TypeToken<ArrayList<Message>>() {}.getType();
+            return GSON.fromJson(reader, messageListType);
+        } catch (IOException e) {
+            System.out.println("Error reading message file: " + e.getMessage());
+            return new ArrayList<>();
+        } catch (JsonSyntaxException e) {
+            System.out.println("Error parsing JSON file: " + e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+
+    // Save message to JSON
+    public void saveMessages(List<Message> messages) {
+        try (FileWriter writer = new FileWriter(FILE_PATH_message)) {
+            GSON.toJson(messages, writer);
+        } catch (IOException e) {
+            System.out.println("Error writing messages file: " + e.getMessage());
+        }
+    }
+
+
+
 }
