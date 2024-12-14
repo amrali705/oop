@@ -92,12 +92,6 @@ public class User {
         Post post = new Post(content,author,time);
         posts.add(post);
     }
-    public Post get_post (int num) {
-        if (num >= 0 && num < posts.size()) {
-            return posts.get(num);
-        }
-        throw new IndexOutOfBoundsException("Invalid post index.");
-    }
 //    public void make_friend_Request(User user,User friend_Request_to){
 //        if (!friends.contains(friend_Request_to)) {
 //            Friend_Request friendRequest = new Friend_Request(user, friend_Request_to);

@@ -102,15 +102,3 @@ public class Mainpagecontroller implements Initializable {
 
         }
 }
-//JsonHandler jsonHandler = new JsonHandler();
-//        List<User> users = jsonHandler.loadUsers();
-//        for(User user :users){
-//            conter++;
-//            if (!user.getFriends().contains(LoginController.theuser)&Suggestionnum==conter){
-//                username.setText(user.name);
-//                Suggestionnum=conter;
-//                System.out.println("iam in ");
-//                break;
-//            }
-//
-//        }
