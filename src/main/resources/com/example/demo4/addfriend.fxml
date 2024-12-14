@@ -7,19 +7,19 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.addingfriend">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="156.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.addingfriendcontroller">
    <children>
-      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="7.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="-1.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@png/profile.png" />
          </image>
       </ImageView>
-      <Label fx:id="username" layoutX="46.0" layoutY="16.0" text="username">
+      <Label fx:id="username" layoutX="29.0" layoutY="15.0" text="username">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Button layoutX="169.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#addfriend" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: #1d04ff;" text="Add" textFill="WHITE">
+      <Button layoutX="107.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#addfriend" prefHeight="26.0" prefWidth="46.0" style="-fx-background-color: #1d04ff;" text="Add" textFill="WHITE">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

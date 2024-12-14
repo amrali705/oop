@@ -34,8 +34,7 @@ public class Friend_Request {
     public void accept_Request(){
         if ("PENDING".equals(this.status)) {
             setStatus("ACCEPTED");
-            sender.add_friend(receiver);
-            receiver.add_friend(sender);
+            sender.add_friend(receiver.getEmail());
         }
     }
     public void declineRequest(){

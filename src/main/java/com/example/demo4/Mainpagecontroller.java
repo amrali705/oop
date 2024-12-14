@@ -6,6 +6,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
@@ -17,13 +18,12 @@ import java.util.ResourceBundle;
 public class Mainpagecontroller implements Initializable {
         @FXML
         private BorderPane mainborderbane;
-
         @FXML
         private Button toprofile;
-
         @FXML
         private VBox vbox_of_friends;
-
+        @FXML
+        private VBox vbox_of_Suggestions;
         @FXML
         private VBox vbox_of_postes;
         @FXML
@@ -50,15 +50,67 @@ public class Mainpagecontroller implements Initializable {
                 JsonHandler jsonHandler = new JsonHandler();
                 List<Post> posts = jsonHandler.loadPosts();
                 for (Post post : posts) {
-                    FXMLLoader fxmlLoader=new FXMLLoader();
-                    fxmlLoader.setLocation(getClass().getResource("post.fxml"));
-                    BorderPane borderPane =fxmlLoader.load();
-                    postcontroller postcontroller = fxmlLoader.getController();
-                    postcontroller.setData(post);
-                    vbox_of_postes.getChildren().add(borderPane);
+                    if (LoginController.theuser.getFriends().contains(post.getAuthor().getEmail()) | LoginController.theuser.getEmail().equals(post.getAuthor().getEmail()) ) {
+                        FXMLLoader fxmlLoader = new FXMLLoader();
+                        fxmlLoader.setLocation(getClass().getResource("post.fxml"));
+                        BorderPane borderPane = fxmlLoader.load();
+                        postcontroller postcontroller = fxmlLoader.getController();
+
+                        postcontroller.setData(post);
+                        vbox_of_postes.getChildren().add(borderPane);
+                    }
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+
+            try {
+                    JsonHandler jsonHandler = new JsonHandler();
+                    List<User> users = jsonHandler.loadUsers();
+                for(User user :users){
+                     if (!LoginController.theuser.getFriends().contains(user.getEmail()) & ! user.getEmail().equals(LoginController.theuser.getEmail())){
+                         FXMLLoader fxmlLoader=new FXMLLoader();
+                         fxmlLoader.setLocation(getClass().getResource("addfriend.fxml"));
+                         AnchorPane anchorPane =fxmlLoader.load();
+                         addingfriendcontroller addingfriendcontroller= fxmlLoader.getController();
+                         addingfriendcontroller.setData(user);
+                         vbox_of_Suggestions.getChildren().add(anchorPane);
+                     }
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+            try {
+                JsonHandler jsonHandler = new JsonHandler();
+                List<User> users = jsonHandler.loadUsers();
+                for(User user :users){
+                    if (LoginController.theuser.getFriends().contains(user.getEmail()) & ! user.getEmail().equals(LoginController.theuser.getEmail())){
+                        FXMLLoader fxmlLoader=new FXMLLoader();
+                        fxmlLoader.setLocation(getClass().getResource("friend.fxml"));
+                        AnchorPane anchorPane =fxmlLoader.load();
+                        friendcontroller friendcontroller= fxmlLoader.getController();
+                        friendcontroller.setData(user);
+                        vbox_of_friends.getChildren().add(anchorPane);
+                    }
+                }
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+
+
+
         }
 }
+//JsonHandler jsonHandler = new JsonHandler();
+//        List<User> users = jsonHandler.loadUsers();
+//        for(User user :users){
+//            conter++;
+//            if (!user.getFriends().contains(LoginController.theuser)&Suggestionnum==conter){
+//                username.setText(user.name);
+//                Suggestionnum=conter;
+//                System.out.println("iam in ");
+//                break;
+//            }
+//
+//        }

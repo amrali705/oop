@@ -14,8 +14,8 @@ public class User {
     private String email;
     private String password;
     private Date birthdate;
-    private final ArrayList<User> friends ;
-    private final ArrayList<Post>posts;
+    private List<String> friends ;
+    private final List<Post>posts;
     private String bio;
 
 
@@ -66,18 +66,18 @@ public class User {
     public void setBirthdate(Date birthdate) {
         this.birthdate = birthdate;
     }
-    public ArrayList<Post> getPosts() {
+    public List<Post> getPosts() {
         return posts;
     }
-    public ArrayList<User> getFriends() {
+    public List<String> getFriends() {
         return friends;
     }
 
 
-    protected void  add_friend (User friend ){
+    protected void  add_friend (String friend ){
         if (!friends.contains(friend)) friends.add(friend);
     }
-    public void  remove_friend (User friend ){
+    public void  remove_friend (String friend ){
         friends.remove(friend);
     }
     public void  edit_Profile (String name,String bio){
@@ -98,11 +98,11 @@ public class User {
         }
         throw new IndexOutOfBoundsException("Invalid post index.");
     }
-    public void make_friend_Request(User user,User friend_Request_to){
-        if (!friends.contains(friend_Request_to)) {
-            Friend_Request friendRequest = new Friend_Request(user, friend_Request_to);
-        }
-    }
+//    public void make_friend_Request(User user,User friend_Request_to){
+//        if (!friends.contains(friend_Request_to)) {
+//            Friend_Request friendRequest = new Friend_Request(user, friend_Request_to);
+//        }
+//    }
 
 
 

@@ -8,7 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
-
+import javafx.scene.text.Text;
 import java.io.IOException;
 import java.net.URL;
 import java.util.List;
@@ -18,6 +18,8 @@ public class profilecontroller implements Initializable {
 
     @FXML
     private Button home;
+    @FXML
+    private Text username;
 
     @FXML
     private TextField searchbar;
@@ -33,6 +35,7 @@ public class profilecontroller implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        username.setText(LoginController.theuser.name);
         try {
             JsonHandler jsonHandler = new JsonHandler();
             List<Post> posts = jsonHandler.loadPosts();
