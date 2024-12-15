@@ -65,17 +65,17 @@ public class Mainpagecontroller implements Initializable {
             }
 
             try {
-                    JsonHandler jsonHandler = new JsonHandler();
-                    List<User> users = jsonHandler.loadUsers();
+                JsonHandler jsonHandler = new JsonHandler();
+                List<User> users = jsonHandler.loadUsers();
                 for(User user :users){
-                     if (!LoginController.theuser.getFriends().contains(user.getEmail()) & ! user.getEmail().equals(LoginController.theuser.getEmail())){
-                         FXMLLoader fxmlLoader=new FXMLLoader();
-                         fxmlLoader.setLocation(getClass().getResource("addfriend.fxml"));
-                         AnchorPane anchorPane =fxmlLoader.load();
-                         addingfriendcontroller addingfriendcontroller= fxmlLoader.getController();
-                         addingfriendcontroller.setData(user);
-                         vbox_of_Suggestions.getChildren().add(anchorPane);
-                     }
+                    if (!LoginController.theuser.getFriends().contains(user.getEmail()) & ! user.getEmail().equals(LoginController.theuser.getEmail())){
+                        FXMLLoader fxmlLoader=new FXMLLoader();
+                        fxmlLoader.setLocation(getClass().getResource("addfriend.fxml"));
+                        AnchorPane anchorPane =fxmlLoader.load();
+                        addingfriendcontroller addingfriendcontroller= fxmlLoader.getController();
+                        addingfriendcontroller.setData(user);
+                        vbox_of_Suggestions.getChildren().add(anchorPane);
+                    }
                 }
             } catch (IOException e) {
                 throw new RuntimeException(e);
@@ -83,12 +83,12 @@ public class Mainpagecontroller implements Initializable {
             try {
                 JsonHandler jsonHandler = new JsonHandler();
                 List<User> users = jsonHandler.loadUsers();
-                for(User user :users){
-                    if (LoginController.theuser.getFriends().contains(user.getEmail()) & ! user.getEmail().equals(LoginController.theuser.getEmail())){
-                        FXMLLoader fxmlLoader=new FXMLLoader();
+                for(User user :users) {
+                    if (LoginController.theuser.getFriends().contains(user.getEmail()) & !user.getEmail().equals(LoginController.theuser.getEmail())) {
+                        FXMLLoader fxmlLoader = new FXMLLoader();
                         fxmlLoader.setLocation(getClass().getResource("friend.fxml"));
-                        AnchorPane anchorPane =fxmlLoader.load();
-                        friendcontroller friendcontroller= fxmlLoader.getController();
+                        AnchorPane anchorPane = fxmlLoader.load();
+                        friendcontroller friendcontroller = fxmlLoader.getController();
                         friendcontroller.setData(user);
                         vbox_of_friends.getChildren().add(anchorPane);
                     }
@@ -97,8 +97,29 @@ public class Mainpagecontroller implements Initializable {
                 throw new RuntimeException(e);
             }
 
-
-
-
         }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

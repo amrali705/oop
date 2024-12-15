@@ -4,11 +4,15 @@ public class Message {
     private User sender;
     private String content;
 
-    public Message(String messageId, User sender, String content) {
+    public Message(String messageId, User sender,String content) {
         this.messageId = messageId;
         this.sender = sender;
         this.content = content;
+
     }
+
+
+
 
     public String getMessageId() {
         return messageId;

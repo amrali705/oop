@@ -16,8 +16,8 @@ public class JsonHandler {
 
     private static final String FILE_PATH_user = "users.json";
     private static final String FILE_PATH_post = "posts.json";
-    private static final String FILE_PATH_message = "message.json";
-
+    private static final String FILE_PATH_message = "massages.json";
+    private static final String FILE_PATH_conversation = "conversations.json";
     private static final Gson GSON = new GsonBuilder()
             .setDateFormat("yyyy-MM-dd")
             .create();
@@ -65,7 +65,7 @@ public class JsonHandler {
 
 
     // Save posts to JSON
-    public void savePosts(List<Post>posts) {
+    public void savePosts(List<Post> posts) {
         try (FileWriter writer = new FileWriter(FILE_PATH_post)) {
             GSON.toJson(posts, writer);
         } catch (IOException e) {
@@ -73,9 +73,7 @@ public class JsonHandler {
         }
     }
 
-
-
-////////////      message          ////////////
+    ////////////      message          ////////////
 
     // Load message from JSON
     public List<Message> loadMessages() {
@@ -101,5 +99,25 @@ public class JsonHandler {
     }
 
 
-
+    ///conversation////
+    public List<Conversation> loadconversation() {
+        try (FileReader reader = new FileReader(FILE_PATH_conversation)) {
+            Type conversationListType = new TypeToken<ArrayList<Conversation>>() {}.getType();
+            return GSON.fromJson(reader, conversationListType);
+        } catch (IOException e) {
+            System.out.println("Error reading conversation file: " + e.getMessage());
+            return new ArrayList<>();
+        } catch (JsonSyntaxException e) {
+            System.out.println("Error parsing JSON file: " + e.getMessage());
+            return new ArrayList<>();
+        }
+    }
+    // Save conversation to JSON
+    public void saveconversations(List<Conversation> conversations) {
+        try (FileWriter writer = new FileWriter(FILE_PATH_conversation)) {
+            GSON.toJson(conversations, writer);
+        } catch (IOException e) {
+            System.out.println("Error writing conversation file: " + e.getMessage());
+        }
+    }
 }

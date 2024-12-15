@@ -1,1 +1,12 @@
-[{"id":1,"name":"omar","email":"omar@gmail.com","password":"1234","birthdate":"2024-12-12","friends":["amrali@gmail.com"],"posts":[]},{"id":1,"name":"amrali","email":"amrali@gmail.com","password":"1.2.3","birthdate":"2024-12-11","friends":["omar@gmail.com","ali@gmail.com"],"posts":[]},{"id":1,"name":"Ali","email":"ali@gmail.com","password":"12345","birthdate":"2024-11-27","friends":["amrali@gmail.com"],"posts":[]},{"id":1,"name":"jana","email":"jana@gmail.com","password":"0123","birthdate":"2024-11-28","friends":["amrali@gmail.com"],"posts":[]}]
+[
+  {
+    "birthdate": "2024-12-12",
+    "email": "omar@gmail.com",
+    "friends": [
+      "amrali@gmail.com"
+    ],
+    "id": 1,
+    "name": "omar",
+    "password": "1234",
+    "posts": []
+  },{"id":1,"name":"Ali","email":"ali@gmail.com","password":"12345","birthdate":"2024-11-27","friends":["amrali@gmail.com"],"posts":[]},{"id":1,"name":"jana","email":"jana@gmail.com","password":"0123","birthdate":"2024-11-28","friends":["amrali@gmail.com"],"posts":[]},{"id":1,"name":"mariam","email":"mariam@gmail.com","password":"123456","birthdate":"2024-12-04","friends":["amrali@gmail.com"],"posts":[]},{"id":1,"name":"alaa","email":"alaa@gmail.com","password":"123","birthdate":"2024-12-11","friends":["amrali@gmail.com"],"posts":[]},{"id":1,"name":"amrali","email":"amrali@gmail.com","password":"1.2.3","birthdate":"2024-12-11","friends":["omar@gmail.com","ali@gmail.com","alaa@gmail.com"],"posts":[]}]

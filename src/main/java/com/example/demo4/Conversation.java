@@ -18,7 +18,32 @@ public class Conversation {
             //this.isPrivate = true;
             this.messages = new ArrayList<>();
         }
-        //public conversation
+
+    public String getConversationId() {
+        return conversationId;
+    }
+
+    public void setConversationId(String conversationId) {
+        this.conversationId = conversationId;
+    }
+
+    public List<User> getParticipants() {
+        return participants;
+    }
+
+    public void setParticipants(List<User> participants) {
+        this.participants = participants;
+    }
+
+    public List<Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<Message> messages) {
+        this.messages = messages;
+    }
+
+    //public conversation
         public Conversation(String conversationId, List<User> participants) {
             this.conversationId = conversationId;
             this.participants = participants;
@@ -42,10 +67,8 @@ public class Conversation {
         }
         //Add the message to the conversation
         public void sendMessage(String messageId,User sender, String content) {
-            if (participants.contains(sender)) {
-                Message message = new Message(messageId,sender, content);
+                Message message = new Message(messageId,sender,content);
                 messages.add(message);
-            }
         }
         //delete message
         public void deleteMessage(String messageId) {
@@ -66,6 +89,11 @@ public class Conversation {
             for (Message message : messages) {
                message.displayMessage();
             }
+        }
+
+        public List<Message> addmessage(Message message){
+            messages.add(message);
+            return messages;
         }
 
 }

@@ -2,6 +2,7 @@ package com.example.demo4;
 
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.PasswordField;
@@ -9,8 +10,11 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import java.io.IOException;
 import java.sql.Date;
 import java.util.List;
+
 
 public class CreatingAccountController {
 
@@ -55,6 +59,14 @@ public class CreatingAccountController {
                 jsonHandler.saveUsers(users); // Save updated user list to file
                 System.out.println("User registered successfully!");
                 LoginController.theuser=newUser;
+                List <Conversation> conversations = jsonHandler.loadconversation();
+                
+                            // Create and save a new conversation
+                Conversation conversation = new Conversation(newUser.name, newUser, LoginController.theuser);
+                conversations.add(conversation);
+                jsonHandler.saveconversations(conversations);
+
+
                 new Mainpageview().mainpageview();
 
 
