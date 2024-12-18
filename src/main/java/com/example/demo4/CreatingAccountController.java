@@ -48,7 +48,6 @@ public class CreatingAccountController {
 
     @FXML
     void CreateAccount(MouseEvent event) {
-
         try {
             if (passwordTf.getText().equals(confirmpasswordTf.getText())) {
                 Date BirthDate = Date.valueOf(birthdate.getValue());
@@ -59,14 +58,6 @@ public class CreatingAccountController {
                 jsonHandler.saveUsers(users); // Save updated user list to file
                 System.out.println("User registered successfully!");
                 LoginController.theuser=newUser;
-                List <Conversation> conversations = jsonHandler.loadconversation();
-                
-                            // Create and save a new conversation
-                Conversation conversation = new Conversation(newUser.name,null, LoginController.theuser.getEmail());
-                conversations.add(conversation);
-                jsonHandler.saveconversations(conversations);
-
-
                 new Mainpageview().mainpageview();
 
 
@@ -78,7 +69,6 @@ public class CreatingAccountController {
             e.printStackTrace();
         }
     }
-
 @FXML
     public void editaccount(MouseEvent mouseEvent) {
 

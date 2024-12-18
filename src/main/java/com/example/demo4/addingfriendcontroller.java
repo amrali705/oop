@@ -19,21 +19,12 @@ public class addingfriendcontroller {
         JsonHandler jsonHandler = new JsonHandler();
         List<User> users = jsonHandler.loadUsers();
         List<Conversation> conversations= jsonHandler.loadconversation();
-        Conversation conversation1 ;
-
         for(User user :users){
             if(user.name.equals(username.getText())){
                 LoginController.theuser.getFriends().add(user.getEmail());
-                for (Conversation conversation : conversations){
-                    if(conversation.getConversationId().equals(user.name)){
-                        conversation1=conversation;
-                        conversation1.addParticipant(LoginController.theuser.getEmail());
-                        conversations.remove(conversation);
-                        conversations.add(conversation1);
-                        break;
-                    }
-
-                }
+                // Create and save a new conversation
+                Conversation conversation = new Conversation(user.name,user.getEmail(), LoginController.theuser.getEmail());
+                conversations.add(conversation);
                 break; // new
             }
         }

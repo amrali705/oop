@@ -104,7 +104,7 @@
                               <Image url="@png/profile.png" />
                            </image>
                         </ImageView>
-                        <Button layoutX="643.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#editprofile" onMouseEntered="#editprofile" text="edit profile" />
+                        <Button layoutX="643.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#editprofile" text="edit profile" />
                      </children>
                   </AnchorPane>
                   <AnchorPane prefHeight="303.0" prefWidth="692.0">
