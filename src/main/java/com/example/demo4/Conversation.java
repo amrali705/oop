@@ -6,11 +6,11 @@ import java.util.List;
 public class Conversation {
     //
         private String conversationId;
-        private List<User> participants;
+        private List<String> participants;
         private List<Message> messages;
         // private boolean isPrivate;//if two=1&more=0
         //private conversation
-        public Conversation(String conversationId, User user1, User user2) {
+        public Conversation(String conversationId, String user1, String user2) {
             this.conversationId = conversationId;
             this.participants = new ArrayList<>();
             this.participants.add(user1);
@@ -27,11 +27,11 @@ public class Conversation {
         this.conversationId = conversationId;
     }
 
-    public List<User> getParticipants() {
+    public List<String> getParticipants() {
         return participants;
     }
 
-    public void setParticipants(List<User> participants) {
+    public void setParticipants(List<String> participants) {
         this.participants = participants;
     }
 
@@ -44,7 +44,7 @@ public class Conversation {
     }
 
     //public conversation
-        public Conversation(String conversationId, List<User> participants) {
+        public Conversation(String conversationId, List<String> participants) {
             this.conversationId = conversationId;
             this.participants = participants;
             // this.isPrivate = false;
@@ -52,11 +52,11 @@ public class Conversation {
         }
 
         //add Participant
-        public void addParticipant(User user) {
-            if (!participants.contains(user)) {
+        public void addParticipant(String user) {
+//            if (!participants.contains(user)) {
                 participants.add(user);
-                System.out.println(user.getName() + " added to the conversation.");
-            }
+                System.out.println(user + " added to the conversation.");
+//            }
         }
         //removeParticipant
         public void removeParticipant(User user) {
@@ -82,8 +82,8 @@ public class Conversation {
       //display output
         public void displayConversation() {
           System.out.println("Participants: ");
-            for (User participant : participants) {
-                System.out.println("- " + participant.getName());
+            for (String participant : participants) {
+                System.out.println("- " + participant);
             }
             System.out.println("Messages: ");
             for (Message message : messages) {

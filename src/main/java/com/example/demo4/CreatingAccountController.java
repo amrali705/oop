@@ -62,7 +62,7 @@ public class CreatingAccountController {
                 List <Conversation> conversations = jsonHandler.loadconversation();
                 
                             // Create and save a new conversation
-                Conversation conversation = new Conversation(newUser.name, newUser, LoginController.theuser);
+                Conversation conversation = new Conversation(newUser.name,null, LoginController.theuser.getEmail());
                 conversations.add(conversation);
                 jsonHandler.saveconversations(conversations);
 

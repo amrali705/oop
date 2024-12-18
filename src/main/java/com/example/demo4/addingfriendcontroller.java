@@ -18,20 +18,28 @@ public class addingfriendcontroller {
     public void addfriend(MouseEvent event) {
         JsonHandler jsonHandler = new JsonHandler();
         List<User> users = jsonHandler.loadUsers();
+        List<Conversation> conversations= jsonHandler.loadconversation();
+        Conversation conversation1 ;
 
         for(User user :users){
             if(user.name.equals(username.getText())){
                 LoginController.theuser.getFriends().add(user.getEmail());
-//                Friend_Request friendRequestnew=new  Friend_Request(LoginController.theuser,user);
-//                friendRequestnew.accept_Request();
-//                for (User user1 :users){
-//                    if (user1.getEmail().equals(user.getEmail())){
-//                        user1=friendRequestnew.getSender();
-//                        break;
-//                    }
-//                }
+                for (Conversation conversation : conversations){
+                    if(conversation.getConversationId().equals(user.name)){
+                        conversation1=conversation;
+                        conversation1.addParticipant(LoginController.theuser.getEmail());
+                        conversations.remove(conversation);
+                        conversations.add(conversation1);
+                        break;
+                    }
+
+                }
+                break; // new
             }
         }
+
+
+        jsonHandler.saveconversations(conversations);
 
         for (User user :users){
             if (user.getEmail().equals(LoginController.theuser.getEmail()))
@@ -53,3 +61,11 @@ public class addingfriendcontroller {
 
 }
 
+//                Friend_Request friendRequestnew=new  Friend_Request(LoginController.theuser,user);
+//                friendRequestnew.accept_Request();
+//                for (User user1 :users){
+//                    if (user1.getEmail().equals(user.getEmail())){
+//                        user1=friendRequestnew.getSender();
+//                        break;
+//                    }
+//                }
