@@ -84,6 +84,7 @@
                      </font>
                   </Label>
                   <Button fx:id="likeButton" layoutX="23.0" layoutY="16.0" mnemonicParsing="false" onMouseClicked="#makelike" opacity="0.0" prefHeight="26.0" prefWidth="69.0" />
+                  <Button layoutX="180.0" layoutY="11.0" mnemonicParsing="false" onMouseClicked="#opencomment" opacity="0.0" prefHeight="31.0" prefWidth="140.0" />
                </children>
             </AnchorPane>
          </children>

@@ -1,1 +1,71 @@
-[{"content":"test 0000000","comments":[],"likes":[],"author":{"id":1,"name":"sss","email":"sss","password":"sss","birthdate":"2024-12-04","friends":["aaa"],"posts":[]},"post_id":1,"time_post":"2024-12-04"}]
+[
+  {
+    "author": {
+      "id": 1,
+      "name": "sss",
+      "email": "sss",
+      "password": "sss",
+      "birthdate": "2024-12-04T00:00:00",
+      "friends": [
+        "aaa"
+      ],
+      "posts": []
+    },
+    "comments": [],
+    "content": "test 0000000",
+    "likes": [],
+    "post_id": 1,
+    "time_post": "2024-12-04T00:00:00"
+  },
+  {
+    "author": {
+      "id": 1,
+      "name": "aaa",
+      "email": "aaa",
+      "password": "aaa",
+      "birthdate": "2024-11-28T00:00:00",
+      "friends": [
+        "sss"
+      ],
+      "posts": []
+    },
+    "comments": [],
+    "content": "teest time",
+    "likes": [],
+    "post_id": 1,
+    "time_post": "2024-12-19T00:00:00"
+  },
+  {
+    "author": {
+      "id": 1,
+      "name": "aaa",
+      "email": "aaa",
+      "password": "aaa",
+      "birthdate": "2024-11-28T00:00:00",
+      "friends": [
+        "sss"
+      ],
+      "posts": []
+    },
+    "comments": [],
+    "content": "test data",
+    "likes": [],
+    "post_id": 1,
+    "time_post": "2024-12-19T02:09:52"
+  },
+  {
+    "author": {
+      "id": 1,
+      "name": "ggg",
+      "email": "ggg",
+      "password": "ggg",
+      "birthdate": "2024-12-05T00:00:00",
+      "friends": [],
+      "posts": []
+    },
+    "comments": [],
+    "content": "test50",
+    "likes": [],
+    "post_id": 1,
+    "time_post": "2024-12-19T02:12:08"
+  }]

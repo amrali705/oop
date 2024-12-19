@@ -9,6 +9,7 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.util.Date;
 import java.util.List;
 
 public class Createpostcontroller {
@@ -41,7 +42,7 @@ public class Createpostcontroller {
 
         JsonHandler jsonHandler = new JsonHandler();
         List<Post> posts = jsonHandler.loadPosts();
-        post =new Post(contentofpost.getText(),LoginController.theuser,LoginController.theuser.getBirthdate());
+        post =new Post(contentofpost.getText(),LoginController.theuser,new Date());
         posts.add(post);
         jsonHandler.savePosts(posts); // Save updated user list to file
         System.out.println("post  successfully!");

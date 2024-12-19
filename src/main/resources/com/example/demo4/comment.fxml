@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.commentcontroller">
+    <top>
+        <AnchorPane prefWidth="600.0" BorderPane.alignment="CENTER">
+            <children>
+                <Label fx:id="comment" alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="242.0" layoutY="12.0" prefHeight="27.0" prefWidth="116.0" text="comments" textAlignment="CENTER">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="556.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@png/icons8-circled-x-50.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="closecomment" layoutX="556.0" layoutY="13.0" mnemonicParsing="false" onMouseClicked="#closecomment" onMousePressed="#closecomment" opacity="0.0" prefHeight="25.0" prefWidth="31.0" />
+            </children>
+        </AnchorPane>
+    </top>
+   <bottom>
+      <AnchorPane prefHeight="67.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+                <TextArea fx:id="commentTextarea" layoutX="66.0" layoutY="16.0" prefHeight="41.0" prefWidth="468.0" />
+                <ImageView fitHeight="44.0" fitWidth="48.0" layoutX="14.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@png/profile.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="50.0" fitWidth="61.0" layoutX="536.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@sender.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="sendcomment" layoutX="539.0" layoutY="9.0" mnemonicParsing="false" onMouseClicked="#sendcomment" onMousePressed="#send" opacity="0.0" prefHeight="58.0" prefWidth="54.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <ScrollPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="commentVbox" prefWidth="594.0" />
+         </content>
+      </ScrollPane>
+   </center>
+</BorderPane>
