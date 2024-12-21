@@ -3,12 +3,7 @@ package com.example.demo4;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.RadioButton;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
@@ -45,30 +40,76 @@ public class CreatingAccountController {
 
     @FXML
     private TextField userNameTf;
+    @FXML
+    private Label messageLabel;
 
     @FXML
     void CreateAccount(MouseEvent event) {
-        try {
-            if (passwordTf.getText().equals(confirmpasswordTf.getText())) {
-                Date BirthDate = Date.valueOf(birthdate.getValue());
+
+            try {
+                String username = userNameTf.getText();
+                String email = emailTf.getText();
+                String password = passwordTf.getText();
+                String confirmPassword = confirmpasswordTf.getText();
+
+                // Check if any field is empty
+                if (username.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
+                    messageLabel.setText("All fields are required!");
+                    return;
+                }
+
+                // Validate email format
+                if (!email.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$")) {
+                    messageLabel.setText("Invalid email format!");
+                    return;
+                }
+
+                // Check password length
+                if (password.length() < 6) {
+                    messageLabel.setText("Password must be at least 6 characters!");
+                    return;
+                }
+
+                // Check if passwords match
+                if (!password.equals(confirmPassword)) {
+                    messageLabel.setText("Passwords do not match!");
+                    return;
+                }
+
+                // Create Date object from DatePicker
+                Date birthDate = Date.valueOf(birthdate.getValue());
+
+                // Load existing users
                 JsonHandler jsonHandler = new JsonHandler();
-                List <User> users = jsonHandler.loadUsers();
-                User newUser = new User(userNameTf.getText(), emailTf.getText(), confirmpasswordTf.getText(),BirthDate);
+                List<User> users = jsonHandler.loadUsers();
+
+                // Check if email is unique
+                for (User user : users) {
+                    if (user.getEmail().equals(email)) {
+                        messageLabel.setText("Email is already registered!");
+                        return;
+                    }
+                }
+
+                // Create and save the new user
+                User newUser = new User(username, email, password, birthDate);
                 users.add(newUser);
-                jsonHandler.saveUsers(users); // Save updated user list to file
-                System.out.println("User registered successfully!");
-                LoginController.theuser=newUser;
+                jsonHandler.saveUsers(users);
+
+                messageLabel.setTextFill(javafx.scene.paint.Color.GREEN);
+                messageLabel.setText("User registered successfully!");
+
+                // Navigate to the main page
+                LoginController.theuser = newUser;
                 new Mainpageview().mainpageview();
-
-
-            } else {
-                System.out.println("Passwords do not match!");
+            } catch (Exception e) {
+                messageLabel.setText("Error creating account: " + e.getMessage());
+                e.printStackTrace();
             }
-        } catch (Exception e) {
-            System.out.println("Error creating account: " + e.getMessage());
-            e.printStackTrace();
         }
-    }
+
+
+
 @FXML
     public void editaccount(MouseEvent mouseEvent) {
 
