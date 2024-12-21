@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.text.Font?>
 
 
-<Label fx:id="massegecontent" prefWidth="363.0" text="label" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.messagecontroller" />
+<Label fx:id="massegecontent" prefWidth="363.0" text="label" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.messagecontroller">
+   <font>
+      <Font size="18.0" />
+   </font>
+</Label>

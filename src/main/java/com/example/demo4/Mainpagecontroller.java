@@ -55,7 +55,6 @@ public class Mainpagecontroller implements Initializable {
                         fxmlLoader.setLocation(getClass().getResource("post.fxml"));
                         BorderPane borderPane = fxmlLoader.load();
                         postcontroller postcontroller = fxmlLoader.getController();
-
                         postcontroller.setData(post);
                         vbox_of_postes.getChildren().add(borderPane);
                     }

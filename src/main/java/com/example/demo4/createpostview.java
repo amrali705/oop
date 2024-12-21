@@ -10,9 +10,7 @@ import java.io.IOException;
 public class createpostview {
     public Parent root;
     public createpostview() throws IOException {
-
         this.root = FXMLLoader.load(getClass().getResource("making_post.fxml"));
-
     }
     public void Creatingpostview(){
         new HelloApplication().stageview().close();

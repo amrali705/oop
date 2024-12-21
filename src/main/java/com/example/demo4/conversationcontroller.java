@@ -52,7 +52,7 @@ public class conversationcontroller {
         fxmlLoader.setLocation(getClass().getResource("message.fxml"));
         Label label = fxmlLoader.load();
         messagecontroller messagecontroller = fxmlLoader.getController();
-        messagecontroller.setData(messegetextarea.getText());
+        messagecontroller.setData(LoginController.theuser.getName()+":"+messegetextarea.getText());
         massagevbox.getChildren().add(label);
 
     }
